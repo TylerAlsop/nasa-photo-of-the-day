@@ -22,9 +22,7 @@ export default function PictureComponent(){
                 <h2>{pictureData.tile}</h2>
                 <h3>{pictureData.date}</h3>
             </div>
-            <div className="card-img">
-                <img className="picture" src={pictureData.url} alt="picture of the day"></img>
-            </div>
+            <img className="picture" src={pictureData.url} alt="picture of the day"></img>
             <div className="copyright">
                 <p>© {pictureData.copyright}</p>
             </div>
