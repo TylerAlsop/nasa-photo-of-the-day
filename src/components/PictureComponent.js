@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Card, CardImg, CardText,
+    CardTitle, CardSubtitle } from 'reactstrap';
 
 
 export default function PictureComponent(){
     const [pictureData, setPictureData] = useState([])
-    const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggle = () => setDropdownOpen(prevState => !prevState);
 
     useEffect(() => {
         axios
@@ -22,18 +21,18 @@ export default function PictureComponent(){
     
     return (
         <div className="picture-card">
-            <div className="card-head">
-                <h2>{pictureData.tile}</h2>
-                <h3>{pictureData.date}</h3>
-            </div>
-            <img className="picture" src={pictureData.url} alt="picture of the day"></img>
-            <div className="copyright">
-                <p>© {pictureData.copyright}</p>
-            </div>
-            <div className="card-explanation">
-                <p>{pictureData.explanation}</p>
-            </div>
-            
+            <Card>
+                <div className="card-head">
+                    <CardTitle tag="h2">{pictureData.tile}</CardTitle>
+                    <CardTitle tag="h3">{pictureData.date}</CardTitle>
+                </div>
+                <CardImg className="picture" src={pictureData.url} alt="picture of the day"></CardImg>
+                <CardSubtitle className="copyright text-right">© {pictureData.copyright}</CardSubtitle>
+                <CardText className="card-explanation">
+                    <p>{pictureData.explanation}</p>
+                </CardText>
+                
+            </Card>
         </div>
     )
 

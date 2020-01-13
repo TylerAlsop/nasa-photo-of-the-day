@@ -26,8 +26,16 @@
   color: #61dafb;
 }
 
+.picture-card {
+  padding: 1rem;
+}
+
 .picture {
   height: 90vh;
+}
+
+.copyright {
+  padding: 5px;
 }
 
 .card-explanation {
