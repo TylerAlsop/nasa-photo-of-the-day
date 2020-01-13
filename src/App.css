@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: auto;
+  max-width: 75%;
 }
 
 .App-logo {
@@ -22,11 +24,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-.picture {
-  width: 75%;
-  height: auto;
 }
 
 
