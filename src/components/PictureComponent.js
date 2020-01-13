@@ -21,6 +21,7 @@ export default function PictureComponent(){
     console.log("picture ", pictureData);
     
     return (
+        
         <div className="picture-card">
             <div className="card-head">
                 <h2>{pictureData.tile}</h2>
@@ -30,11 +31,21 @@ export default function PictureComponent(){
             <div className="copyright">
                 <p>© {pictureData.copyright}</p>
             </div>
-            <div className="card-explanation">
-                <p>{pictureData.explanation}</p>
-            </div>
-            
+            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle caret>
+                    Picture Explanation
+                    </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem className="card-explanation">
+                        <p>{pictureData.explanation}</p>
+                    </DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+            <footer>
+                <p>Practice Footer</p>
+            </footer>
         </div>
+        
     )
 
 };
