@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
 export default function PictureComponent(){
     const [pictureData, setPictureData] = useState([])
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggle = () => setDropdownOpen(prevState => !prevState);
 
     useEffect(() => {
         axios
