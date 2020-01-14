@@ -28,6 +28,7 @@
 
 .picture-card {
   padding: 1rem;
+  width: 100%;
 }
 
 .picture {
@@ -36,6 +37,7 @@
 
 .copyright {
   padding: 5px;
+  font-size: 10px;
 }
 
 .card-explanation {

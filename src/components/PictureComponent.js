@@ -20,20 +20,17 @@ export default function PictureComponent(){
     console.log("picture ", pictureData);
     
     return (
-        <div className="picture-card">
-            <Card>
-                <div className="card-head">
-                    <CardTitle tag="h2">{pictureData.tile}</CardTitle>
-                    <CardTitle tag="h3">{pictureData.date}</CardTitle>
-                </div>
-                <CardImg className="picture" src={pictureData.url} alt="picture of the day"></CardImg>
-                <CardSubtitle className="copyright text-right">© {pictureData.copyright}</CardSubtitle>
-                <CardText className="card-explanation">
-                    <p>{pictureData.explanation}</p>
-                </CardText>
-                
-            </Card>
-        </div>
+        <Card className="picture-card">
+            <div className="card-head">
+                <CardTitle tag="h2">{pictureData.tile}</CardTitle>
+                <CardTitle tag="h3">{pictureData.date}</CardTitle>
+            </div>
+            <CardImg className="picture" src={pictureData.url} alt="picture of the day"></CardImg>
+            <CardSubtitle className="copyright text-right">© {pictureData.copyright}</CardSubtitle>
+            <CardText className="card-explanation">
+                <p>{pictureData.explanation}</p>
+            </CardText>
+        </Card>
     )
 
 };
